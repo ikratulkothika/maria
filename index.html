@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Mahi 💖</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #ffd9ea 0%, transparent 30%),
+                radial-gradient(circle at top right, #efe0ff 0%, transparent 28%),
+                radial-gradient(circle at bottom left, #ffeaf4 0%, transparent 30%),
+                linear-gradient(180deg, #fff3f9 0%, #f8ebff 45%, #fdf2ff 100%);
+            color: #6f5a6c;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .bg-blur {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(55px);
+            opacity: .45;
+            animation: floatBlob 12s ease-in-out infinite;
+        }
+
+        .blob1 {
+            width: 260px;
+            height: 260px;
+            background: #ffd3e6;
+            top: 5%;
+            left: -60px;
+        }
+
+        .blob2 {
+            width: 280px;
+            height: 280px;
+            background: #ead8ff;
+            top: 30%;
+            right: -70px;
+            animation-delay: 2s;
+        }
+
+        .blob3 {
+            width: 220px;
+            height: 220px;
+            background: #ffe4f1;
+            bottom: 8%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatBlob {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) translateX(15px) scale(1.08);
+            }
+        }
+
+        .floating-hearts,
+        .floating-tea {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart,
+        .tea-float {
+            position: absolute;
+            bottom: -40px;
+            opacity: .85;
+        }
+
+        .heart {
+            font-size: 18px;
+            animation: floatHeart linear forwards;
+        }
+
+        .tea-float {
+            font-size: 22px;
+            animation: floatTea linear forwards;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) scale(.8);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-115vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes floatTea {
+            0% {
+                transform: translateY(0) scale(.8);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-115vh) scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            width: min(1100px, 92%);
+            margin: auto;
+            padding: 28px 0 60px;
+        }
+
+        .top-intro {
+            text-align: center;
+            margin-bottom: 22px;
+            animation: fadeDown .9s ease;
+        }
+
+        .tiny {
+            font-size: 24px;
+            margin-bottom: 8px;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .main-title {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
+            color: #b36a91;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        .sub {
+            max-width: 760px;
+            margin: auto;
+            line-height: 1.9;
+            color: #7a6477;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: .85;
+            }
+        }
+
+        @keyframes titleGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+            }
+
+            50% {
+                text-shadow: 0 0 18px rgba(255, 255, 255, .85);
+            }
+        }
+
+        /* ===== only one section visible ===== */
+        .step {
+            display: none;
+            animation: fadeUp .65s ease;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .62);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, .6);
+            box-shadow: 0 18px 40px rgba(132, 112, 150, .10);
+            border-radius: 34px;
+            padding: 30px 24px;
+            overflow: hidden;
+            position: relative;
+            min-height: 420px;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, .25), rgba(255, 255, 255, 0));
+            pointer-events: none;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(1.9rem, 3vw, 3rem);
+            color: #b06a91;
+            margin-bottom: 12px;
+            line-height: 1.35;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-text {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.95;
+            color: #735f72;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card {
+            text-align: center;
+            background: linear-gradient(135deg, #ffdce9, #f2e0ff, #fbe7f2);
+            border-radius: 28px;
+            padding: 45px 22px;
+            position: relative;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .55);
+            animation: softPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes softPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.01);
+            }
+        }
+
+        .hero-card h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            color: #b1608d;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .hero-card p {
+            max-width: 760px;
+            margin: 0 auto 18px;
+            line-height: 1.95;
+            color: #6f5b6d;
+        }
+
+        .emoji-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 24px;
+            margin-top: 12px;
+        }
+
+        .emoji-row span {
+            animation: bounceSoft 2.2s infinite;
+        }
+
+        .emoji-row span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .emoji-row span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+        .emoji-row span:nth-child(4) {
+            animation-delay: .6s;
+        }
+
+        .emoji-row span:nth-child(5) {
+            animation-delay: .8s;
+        }
+
+        .emoji-row span:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        @keyframes bounceSoft {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .gallery {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .photo {
+            background: #fff;
+            padding: 10px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .07);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            display: block;
+            border-radius: 18px;
+        }
+
+        .mini-grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mini-card {
+            background: linear-gradient(135deg, #ffe8f2, #f3e8ff, #fff0f7);
+            border-radius: 24px;
+            padding: 22px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .05);
+        }
+
+        .mini-card h3 {
+            color: #b16590;
+            margin-bottom: 10px;
+            font-size: 1.08rem;
+        }
+
+        .mini-card p {
+            line-height: 1.9;
+            color: #715e70;
+        }
+
+        .message-box,
+        .final-box {
+            margin-top: 10px;
+            border-radius: 28px;
+            padding: 32px 20px;
+            text-align: center;
+            box-shadow: 0 14px 32px rgba(130, 122, 177, .12);
+            position: relative;
+            z-index: 2;
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #f0dfff, #ffe5f0, #f8ebff);
+        }
+
+        .final-box {
+            background: linear-gradient(135deg, #ffdfea, #efe0ff, #ffeef7);
+            animation: softPulse 4.5s ease-in-out infinite;
+        }
+
+        .message-box p,
+        .final-box p {
+            max-width: 900px;
+            margin: 0 auto 16px;
+            line-height: 1.95;
+            color: #6d5d6f;
+        }
+
+        .special-line,
+        .signature {
+            margin-top: 14px;
+            font-family: 'Pacifico', cursive;
+            color: #ad6b8e;
+            line-height: 1.8;
+        }
+
+        .special-line {
+            font-size: 1.25rem;
+        }
+
+        .signature {
+            font-size: 1.3rem;
+        }
+
+        .wish-list {
+            margin-top: 20px;
+            display: grid;
+            gap: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .wish-item {
+            background: linear-gradient(135deg, #ffe7f1, #f2e6ff, #fff2f8);
+            padding: 16px 18px;
+            border-radius: 18px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .05);
+            line-height: 1.85;
+            color: #6f5d6f;
+            font-weight: 500;
+        }
+
+        .tea-badge-wrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .tea-badge {
+            background: linear-gradient(135deg, #ffe0ee, #f1e2ff, #fff4dd);
+            color: #8c5f73;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: .95rem;
+            font-weight: 600;
+            box-shadow: 0 8px 18px rgba(204, 166, 188, .18);
+            animation: badgePop 2.8s ease-in-out infinite;
+        }
+
+        .tea-badge:nth-child(2) {
+            animation-delay: .4s;
+        }
+
+        .tea-badge:nth-child(3) {
+            animation-delay: .8s;
+        }
+
+        @keyframes badgePop {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-5px) scale(1.03);
+            }
+        }
+
+        .tea-section-box {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #ffe6f2, #f5e8ff, #fff5e6);
+            border-radius: 30px;
+            padding: 28px 20px;
+            box-shadow: 0 14px 32px rgba(190, 150, 185, .14);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tea-title {
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            color: #b16a8f;
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tea-text {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.95;
+            color: #705f70;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tea-cups {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tea-cup {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, #fff7fb, #f8eaff, #fff5ea);
+            box-shadow: 0 12px 26px rgba(190, 160, 190, .18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: cupBounce 3s ease-in-out infinite;
+        }
+
+        .tea-cup:nth-child(2) {
+            animation-delay: .5s;
+        }
+
+        .tea-cup:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes cupBounce {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(-2deg);
+            }
+        }
+
+        .cup-emoji {
+            font-size: 48px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .steam {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .steam span {
+            width: 8px;
+            height: 28px;
+            border-radius: 999px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .95));
+            animation: steamUp 2.1s ease-in-out infinite;
+            opacity: .85;
+        }
+
+        .steam span:nth-child(2) {
+            animation-delay: .4s;
+        }
+
+        .steam span:nth-child(3) {
+            animation-delay: .8s;
+        }
+
+        @keyframes steamUp {
+            0% {
+                transform: translateY(10px) scaleY(.8);
+                opacity: 0;
+            }
+
+            35% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-18px) scaleY(1.15);
+                opacity: 0;
+            }
+        }
+
+        .tea-note-grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tea-note {
+            background: linear-gradient(135deg, #fff6fb, #f6edff, #fff9ef);
+            border-radius: 22px;
+            padding: 20px 16px;
+            text-align: center;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .05);
+        }
+
+        .tea-note .icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+            animation: wiggleTea 2.4s ease-in-out infinite;
+        }
+
+        @keyframes wiggleTea {
+
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            25% {
+                transform: rotate(-5deg) scale(1.05);
+            }
+
+            50% {
+                transform: rotate(5deg) scale(1.08);
+            }
+
+            75% {
+                transform: rotate(-3deg) scale(1.03);
+            }
+        }
+
+        .tea-note h4 {
+            color: #b26b8f;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .tea-note p {
+            color: #746474;
+            line-height: 1.8;
+            font-size: .95rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-btn {
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ffc3da, #ead7ff, #f9dff0);
+            color: #7a4d68;
+            font-weight: 600;
+            padding: 14px 26px;
+            border-radius: 999px;
+            box-shadow: 0 10px 24px rgba(185, 135, 176, .18);
+            transition: .3s ease;
+            font-size: 1rem;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #f8ebff, #ffe6f3, #eef5ff);
+        }
+
+        .tea-btn {
+            background: linear-gradient(135deg, #ffd6e8, #efe1ff, #fff0d8);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            color: #8f7483;
+            font-size: .95rem;
+        }
+
+        @media (max-width: 950px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tea-note-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .card {
+                padding: 20px 16px;
+                border-radius: 26px;
+            }
+
+            .hero-card,
+            .message-box,
+            .final-box,
+            .tea-section-box {
+                padding: 28px 16px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo img {
+                height: 240px;
+            }
+
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-title {
+                font-size: 2.2rem;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .music-box {
+                margin-top: 22px;
+                background: linear-gradient(135deg, #ffe6f2, #efe3ff, #eaf4ff);
+                border-radius: 24px;
+                padding: 20px;
+                box-shadow: 0 12px 28px rgba(180, 140, 180, .12);
+                max-width: 760px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .music-box h3 {
+                color: #b1608d;
+                margin-bottom: 8px;
+                font-family: 'Pacifico', cursive;
+                font-size: 1.5rem;
+            }
+
+            .music-box p {
+                color: #6f5b6d;
+                line-height: 1.8;
+                margin-bottom: 14px;
+            }
+
+            .music-frame {
+                width: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+            }
+
+            .music-frame iframe {
+                width: 100%;
+                height: 220px;
+                border: 0;
+                display: block;
+            }
+
+            .video-container {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.4);
+            }
+
+            .video-container video {
+                width: 320px;
+                max-width: 90vw;
+                aspect-ratio: 9/16;
+                height: auto;
+                object-fit: cover;
+                border-radius: 22px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+            }
+
+            .video-page {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+
+
+            .video-page .video-container video {
+                width: 320px;
+                max-width: 90vw;
+                aspect-ratio: 9 / 16;
+                height: auto;
+                object-fit: cover;
+                border-radius: 22px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="enterScreen" style="
+position:fixed;
+inset:0;
+background:linear-gradient(135deg,#ffd6e8,#efe0ff,#fff0f5);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+z-index:9999;
+font-family:Poppins;
+text-align:center;
+">
+        <h1 style="font-family:Pacifico; font-size:40px; color:#b1608d;">
+            🎀 Dear Habaitta 🎀
+        </h1>
+
+        <p style="margin:15px 0; color:#6f5b6d;">
+            Every Memory Begins Here ✨💖
+        </p>
+
+        <button onclick="startExperience()" style="
+        padding:12px 24px;
+        border:none;
+        border-radius:999px;
+        background:#ffb6d9;
+        font-weight:600;
+        cursor:pointer;
+    ">
+            Let's Go 💖
+        </button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="ve-mahi.mp3" type="audio/mpeg">
+    </audio>
+    <div class="hero-card">
+        <h2>Happy Birthday 🎂💖</h2>
+        <p>
+        <div class="bg-blur">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+        </div>
+
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="floating-tea" id="floatingTea"></div>
+
+        <div class="wrapper">
+            <div class="top-intro">
+                <div class="tiny">💖🙂☕🎀 </div>
+                <h1 class="main-title"> Dear mahi 💕</h1>
+                <p class="sub">
+                    This little corner was made just for you 🤍
+                    I hope every scroll brings a smile to your face 😊 and reminds you how special you are 🌷
+                    Now, let's begin this little journey together 🤝💫
+
+                </p>
+            </div>
+
+            <!-- STEP 1 -->
+            <section class="step active" id="step1">
+                <div class="card"> Today is your day, Mahi 🌸 — a day filled with smiles 😊, love 💗, warm wishes ✨,
+                    sweet surprises 🎁, and all the little things that make your heart happy 🤍
+
+                    You deserve a birthday that feels as soft 🌷, lovely 💕, and beautiful 🌸 as your soul ✨
+                    </p>
+                    <p>
+                        So I created this tiny birthday surprise page for you, step by step 🦋 — just to make your
+                        special day a little cuter 🤭, a little warmer ✨, and a little more memorable 💞
+                    </p>
+
+                    <div class="emoji-row">
+                        <span>💗</span>
+                        <span>🧁</span>
+                        <span>🎀</span>
+                        <span>☕</span>
+                        <span>✨</span>
+                        <span>🌷</span>
+                    </div>
+
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="goToStep(2)">Open 📸</button>
+                </div>
+        </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="step" id="step2">
+            <div class="card">
+                <h2 class="section-title">Mahi’s Cute Picture Corner 📸</h2>
+                <p class="section-text">
+                    তোর সাথে আমার ভালো কোনো ছবি নাই 🥹🫶🏻
+                </p>
+
+                <div class="gallery">
+                    <div class="photo"><img src="mahi.jpg" alimagest="pic"></div>
+                    <div class="photo"><img src="mahi1.jpg" alt="pic"></div>
+                    <div class="photo"><img src="mahi2.jpg" alt="pic"></div>
+                    <div class="photo"><img src="mahi3.jpg" alt="pic"></div>
+                    <div class="photo"><img src="mahi4.jpg" alt="pic"></div>
+                    <div class="photo"><img src="mahi5.jpg" alt="pic"></div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(1)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(3)">Next surprise 💞</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="step" id="step3">
+            <div class="card">
+                <h2 class="section-title">Why you Special 🌷</h2>
+                <p class="section-text">
+
+                </p>
+
+                <div class="mini-grid">
+                    <div class="mini-card">
+                        <h3>☕ চা খোর</h3>
+                        <p>চা দেখলেই তোর শান্ত মনে আলাদা এক হাসি ফুটে ওঠে,
+                            তাই বলব বেশি বেশি করে চা খা,
+                            চা ছাড়া তোর তো দিনই জমে না 🤪</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <h3>😈 ফাজিল</h3>
+                        <p>দেখতে একদম শান্ত-শিষ্ট, মুখে কোনো দুষ্টুমি নাই,
+                            কিন্তু ভিতরে ভিতরে কী পরিমাণ ফাজিল সেটা আমরা জানি!😏</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <h3>🌷 ব্যক্তিত্ব </h3>
+                        <p>তোর মতো পার্সোনালিটির মানুষ সহজে পাওয়া যায় না, তুই আমার কাছে একদম Only One!🫶🏻💗</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <h3>🎀ধৈর্যশীল </h3>
+                        <p>আল্লাহ তোকে এত ধৈর্য দিয়েছে এর ১% ও যদি আমাকে দিত নিজেকে ধন্য মনে করতাম 🥲</p>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(2)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(4)">Read a special message 💌</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="step" id="step4">
+            <div class="card">
+                <h2 class="section-title">A Special Birthday Message for Mahi 💌</h2>
+
+                <div class="message-box">
+                    <p>
+                        Dear Mahi, on your birthday I just want to remind you how lovely, precious,
+                        and genuinely special you are.
+                    </p>
+
+                    <p>
+                        May this new chapter of your life be filled with unexpected blessings, unforgettable memories,
+                        beautiful opportunities, and countless moments that make your heart truly happy. 🌷✨
+                    </p>
+
+
+
+                    <div class="special-line">
+                        Happy Birthday, Mahi 🌷🎂💗 <br>
+                        You deserve a life full of lovely moments and beautiful surprises ✨
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(3)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(5)">Open my wishes 🌸</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- STEP 5 -->
+        <section class="step" id="step5">
+            <div class="card">
+
+                <h2 class="section-title">Last Year's Birthday Wish 💌</h2>
+
+                <p class="section-text">
+                    Before today's wishes,
+                    I wanted to keep a little memory
+                    from last year. 🤍
+                </p>
+
+                <div class="photo" style="max-width:450px; margin:25px auto;">
+                    <img src="2025.jpg" alt="Last Year Birthday Wish">
+                </div>
+
+                <div class="message-box">
+
+                    <h3 style="color:#b1608d; margin-bottom:15px;">
+                        🌸 ~ Dear Habaitta ~ 🌸
+                    </h3>
+
+                    <p>কিভাবে শুরু করব বুঝতেছিনা
+                        তুই আমার লাইফে এমন একটা সময় আসছিলি যখন আমার পাশে কেউ ছিল না ।
+                        অনেক খারাপ সময় পার করতেছিলাম
+                        নিজের মনের কথা বলার মত কেউ ছিল না
+                        ওই সময় তোর সাথে আমার ভালো ফ্রেন্ডশিপ হয়ে যায়
+                        আমি আমার ওই সময়ের মনের সব কষ্ট, অভিযোগ তোকে বলতাম তুই চুপচাপ শুনতি 😅
+                        সেই স্কুলের লাস্ট এর দিকে ব্রেঞ্চে বসে আমি সব বলতাম তুই চুপচাপ সব শুনে যেতি
+                        সত্যি অনেক মিস করি সেই দিনগুলো তোকে নিয়ে যত বলতে যাব ততো কম হয়ে যাবে
+                        তোর মত পার্সোনালিটির মানুষ দুইটা হয়না তুই বেষ্ট ভাই
+                        তোর কাছ থেকে আমি অনেক কিছু শিখছি কিভাবে মানুষের বিশ্বাস রাখতে হয়
+                        ছোট ছোট ফাইজলামি শয়তানি
+                        কিভাবে ধৈর্য নিয়ে মানুষের সব কথা শুনতে হয় এবং আর ও অনেক কিছু 🫣
+                        এতটা পরিমাণ বিশ্বাস তোকে আমি করি ...</p>
+                    <p>আগে বলতাম না তোর ইগো অনেক বেশি, একটু কমা ইগো.... এখন বুঝতে পারি তোর যতটা আছে এইটা স্বাভাবিক এই
+                        দুনিয়াতে চলতে গেলে এতটাই থাকা দরকার নাহলে চলা যায় না
+                        অনেকদিন রাগ করে কথা বলা অফ করে ফুলে থাকার মত মানুষ তুই না ....অনেকে আছে রাগ করে দিনের পর দিন কথা
+                        বলে না, কথা অফ করে দেয়, এটা আমার ভালো লাগেনা.... তুই রাগ করলে চিল্লাস একটু পরে আবার ঠিক হয়ে
+                        যাস
+                        তোর এই দিকটা আমার অনেক ভালো লাগে 🙃
+                        তুই মানুষের বিশ্বাস রাখতে পারোস
+                        ব্রিলিয়ান্ট স্টুডেন্ট... কি নাই তোর ! সবই তো আছে তোর মধ্যে। দেখতে সুন্দর অনেক কিউট, অনেক
+                        ব্রিলিয়ান্ট ,
+                        তোর পারসোনালিটি তো একদম বেস্ট
+                        মেয়েদের মধ্যে এমন পার্সোনালিটি খুবই কম পাওয়া যায়
+                        মেয়ে মানুষ মানে বুঝতেই তো পারতেছস কেমন টাইপের পার্সোনালিটি থাকে Women ☕ দের
+                        আমার ওমন পার্সোনালিটি একটু পছন্দ না
+                        একটুও ভালো লাগে না
+                        কিন্তু তোর পার্সোনালি একদম বেস্ট ❤️‍🔥</p>
+                    <p>তুই কত সুন্দর করে ধৈর্য নিয়ে ছবি তুলে দেস একটুও বিরক্ত হস না যেখানে অন্য কেউ থাকলে অনেক বিরক্ত
+                        হয়ে যেত কিন্তু তুই সুন্দর করে সব ছবি তুলে দিস কখনো বিরক্ত হোস না
+                        তোর মত এত ধৈর্য নিয়ে আমাকে কেউ ছবি তুলে দেয় না রে 😅
+                        ধাপে ধাপে জীবনের প্রত্যেকটা ধাপ বার হইতেছি এখন বুঝতেছি কোথায় কোন সময় কাকে মিস করতেছি
+                        কোন কোন পর্যায়ে যে তোকে অনেক মিস করি যে এই জায়গায় মাহি থাকলে এমনটা করত না, বা এমন এমন হতো না,
+                        মাঝে মধ্যে অনেক মিস করি এবং মাঝে মধ্যে এটা মনে হয় আমি একটু বেশি আগে ওভার রিয়েকট করতাম
+                        তোকে অনেক ভালোবাসি তাই মোহনা আর তোরে নিয়ে আমি যেই ওভার রিয়েকট গুলো করতাম এখন এইসব ভাবলে নিজের
+                        মধ্যে নিজেরই হাসি পায়, যে আগে কিনা ছিলাম !!
+                        আগে যখন প্রত্যেকটা দিন রাতের বেলা কথা হতো
+                        একটার পর থেকে তিনটা পর্যন্ত ওই দিনগুলো বেস্ট ছিল ভাই 😩❤️‍🔥 অনেক মিস করি ওই রাতগুলো
+                        আমরা তো একটা কথা বলতাম মনে আছে যে আমরা যেভাবে চ্যাট করি এটা তো বিএফ জিএফ কেউ হার মানিয়ে যাবে 😛
+                        আমাদের পরিচয়টা হয়েছিল এই শুটকি মাছকে নিয়ে এই শুটকি মাছকে নিয়ে মূলত আমাদের অনেক কথা হতো এগুলো
+                        সবই এখন মেমোরিছ 🐸</p>
+                    <P>তোকে আমি যতটা ভালবাসি...
+                        আমি জানি তুই আমাকে ভালোবাসিস ,
+                        বলি না বারবার যে তোর কোন ফিলিংস নাই
+                        তোর ফিলিংস আছে তুই প্রকাশ করস না
+                        তুই আমাকে ভালবাসিস সেটা আমি জানি এবং বুঝতে পারি কিন্তু আমি তোকে যতটুকু ভালবাসি যতটা তোকে আমি
+                        ভালোবাসি এতটুকু তুই কি আমাকে বাসোস আদ ও !😅
+                        এখন যে বলি না একটু ফিলিংসটা দেখা একটা আবেগ প্রকাশ কর ,,,কিন্তু তুই যখন আবেগ প্রকাশ করস তখন না
+                        সেটা তোর ক্যারেক্টারের সাথে যায় না 🤡
+                        তোর ক্যারেক্টারের সাথে অলওয়েজ ফাইজলামি টাইপ টাই যায় 😌। কিন্তু আমার অনেক ইচ্ছা আছে যে তোর
+                        আবেগী মন থেকে একবার শুনতে চাই তুই আমাকে কতটা ভালোবাসিস 🫠</p>
+
+                    <p>তোকে কোন কিছু বলতে গেলে আমার ভাবতে হয় না আমার মুখে যা আসে আমি তাই বলে দিতে পারি মানে আমার বাক
+                        স্বাধীনতাটা তোর এখানে অনেক বেশি প্রখর
+                        আমার উল্টাপাল্টা যা মনে চায় বলি
+                        কিন্তু তুই কিছু মনে করস না মাইন্ড করস না গায়ে লাগাস না অনেককে একটা কথা বলতে গেলে তার আগে একশো
+                        বার আমার ভাবা লাগে কিন্তু তোকে কিছু বলতে গেলে আমার ভাবতে হয় না
+                        এটা আমার অনেক ভালো লাগে
+                        এক কথায় তোর পার্সোনালিটি আমার কাছে বেস্ট লাগে অনেক বেস্ট 🫶
+                        জীবনে অনেক নতুন মানুষ আসবে অনেক জনি আসবে কিন্তু তোর জায়গা কেউ নিতে পারবে না
+                        তোর জায়গা তোর জায়গায়ই থাকবে
+                        মন থেকে তোকে যতটা বিশ্বাস করি
+                        এতটা বিশ্বাস নিজের জামাই আসার আগ পর্যন্ত আর কাউরে কোনদিনও করতে পারবো না
+                        জামাইরে করতে পারবো নাকি এতটা বিশ্বাস সেটাও জানি না কিন্তু জামাই আসার আগে আর কাউকে করতে পারবো না
+                        এতটুকু বলতে পারি ‌।
+                        আমার তুই সবদিক থেকে বেস্ট
+                        তুই ফ্রেন্ড হিসেবে বেস্ট , বোন হিসেবেও বেস্ট, ফুপি হিসেবেও বেস্ট, সব দিক থেকে সব ক্যারেক্টারেই
+                        তুই বেস্ট 👻☕</p>
+
+                    <p>আমার কষ্ট লাগতো আগে ,
+                        শুধু এক জায়গায় সেটা হল ফেভারিট পার্সন হতে গেলে কি এমন গুন থাকা লাগে ? যেটা মোহনার মধ্যে ছিল
+                        কিন্তু আমার মধ্যে ছিল না, 😅
+                        ও তোর ভালো ফ্রেন্ড , ভালো ফ্রেন্ড থাকতেই পারে
+                        কিন্তু তুই Specificly ore kno "My most favorite person" বলবি! আমি সময়ের সাথে সাথে অনেক কিছু
+                        রিয়েলাইজ করতে পেরেছি । হ্যাঁ আসলেই করতে পেরেছি সেটা ভালো কথা
+                        কিন্তু শুধু এই কথাটা ভাবলে এখনো কষ্ট লাগে😅
+                        যে তোর সাথে আমার বন্ডিং ও তো মোটামুটি ভাল ছিল
+                        আবার ওর সাথে তোর বন্ডিং ভালো ছিল
+                        তাহলে তুই কেন শুধু স্পেসিফিকলি
+                        ওরে most fav person বলতি
+                        আমি শুধু এই ওয়ার্ড টাই সহ্য করতে পারতাম না
+                        আমার কষ্ট লাগতো এই ওয়ার্ডটা শুনলে
+                        হয়তো অনেক বেশি ভালবাসতাম এর জন্যই কষ্ট লাগতো🙃 এমনিতে তোদের বন্ডিং ভালো এতে আমার কিছু মনে হতো
+                        না কিন্তু তুই যে স্পেসিফিকলি ওরে ওইটা বলতি এটাতে আমার খারাপ লাগতো শুধু
+                        আর তুই যে সবাইরে পান্ডা দিয়েছিলি ,,,,
+                        মোহনা একদিন ওর পান্ডার পিকচার টা আমাকে দেখাইছিল
+                        ও আমাকে তোকে বলতে মানা করেছিল তাই আর‌ বলিনি
+                        জানোস ওই পান্ডার মধ্যে ও তুই লিখছিলি
+                        You are Always be my most favorite person
+                        আমি মোহনারে রিপ্লাই দিয়েছিলাম সুন্দর হয়েছে , একদম নরমাল ছিলাম চ্যাট এ ।
+                        কিন্তু এই পাশে ওই ওয়ার্ডটা দেখেও আমি কান্না করে দিয়েছিলাম।</p>
+
+                    <p> ওইদিন 😅 আমার চোখ থেকে পানি পড়ছে আপনা আপনি
+                        আমার মাথায় শুধু একটাই ঘুরতে ছিল মানুষের ফেভারিট পার্সন হতে গেলে কি থাকা লাগে !🙂
+                        যে জীবনে কারো ফেভারিট পার্সন হতে পারলাম না
+                        মানে এই তোর সাথে মোহনার বন্ডিংয়ে এই লাইনটা আমি নিতে পারি না কেন জানি আমার অনেক বেশি কষ্ট হয় 🙃
+
+                        তোর জন্য অনেক কান্না করছি ভাই অনেক মাঝেমধ্যে রাতের বেলা ১ ঘন্টা পার হয়ে গেছে আমার চোখ থেকে পানি
+                        পড়ছে যে কেন লাইফে যাদের বেশি ভালোবাসি
+                        তারা আমায় আমার মতো আমাকে এতোটা ভালোবাসে না😅
+
+                        কিন্তু ব্যাপার না আগে ছোট ছিলাম বুঝি নাই
+                        এখন এসব মনে পড়লে অনেক হাসি পায়
+                        যে আসলে আমি বলদ ছিলাম
+                        এগুলা কোন ব্যাপারই না
+                        সবাই সবার সাথে মিশবে সবার সাথে কথা বলবে
+                        সবার সাথে মিশা দরকার
+                        আমার কাছে তোর খারাপ দিক বলতে গেলে কিছুই নেই
+                        যা ছিল শুধু ওই একটাই তোর ইগো অনেক বেশি
+                        তোর এই একটা একটাই আমার কাছে তোর খারাপ ছিল
+                        কিন্তু এখন এই মুহূর্তে আমি বুঝতেছি তোর ওই ইগোটা স্বাভাবিক এই দুনিয়াতে চলতে গেলে এতোটুকু থাকা
+                        দরকার
+                        তোর মত ফ্রেন্ড হওয়া ভাগ্যের ব্যাপার
+                        আজকে অনেক মন খারাপ ছিল
+                        কেন জানি অনেক মিস করতেছি
+                        কাউকে আমার পারফেক্টলি ভালো লাগতো না
+                        সবারই কিছু না কিছু ভালো খারাপ দিক রয়েছে
+                        কিন্তু আমি যাদের সাথে বেশি বেশি তাদের প্রত্যেকেরই খারাপ দিকটাই বেশি ধরতে পারি ,,, তাদের খারাপ
+                        দিকগুলো ভাবতে ভাবতে তখন মনে পড়লো তোর তো কোন খারাপ দিক আমার চোখে পড়তেছে না তোর ইগো টা খারাপ দিক
+                        ছিল কিন্তু এই দুনিয়াতে বুঝতে পারলাম তোর যতটুকু ইগো ছিল ততটুকু থাকা এই সিচুয়েশন এ এই সময় এসে
+                        সেটা স্বাভাবিক
+                        সো তোর মধ্যে খারাপ বলতে তো কিছুই নেই তোর সবকিছুই অনেক ভালো তোর ফুল পার্সোনালিটি টাই অনেক ভালো
+                        তোর মত কেউ এত সহজে আমার মন জয় করে নিতে পারবে না
+
+                        আর একদিন মন খুলে হলেও বলিস আমার সম্পর্কে তোর কি কি ধারণা এবং তুই আমাকে কতটা ভালোবাসিস সেটা শোনার
+                        অপেক্ষায় থাকবো 🙃</p>
+
+
+                    <p>At last ......
+                        এতো সুন্দর একজন মানুষ!
+                        এতো সুন্দর তার ফানি ক্যারেক্টার 🙊!
+                        কি মিষ্টি! কি অমায়িক!🌻 </p>
+
+
+                    <div class="special-line">
+                        Some memories never fade... 💖
+                    </div>
+
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(4)">
+                        ← Back
+                    </button>
+
+                    <button class="nav-btn" onclick="goToStep(6)">
+                        Continue 💕
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- STEP 6 -->
+        <section class="step" id="step6">
+            <div class="card">
+
+                <h2 class="section-title">Our Beautiful Memories 💖</h2>
+
+                <p class="section-text">
+                    এই পর্যন্ত তোর সাথে পরিচয় হওয়ার পর আমার ৫টা জন্মদিন চলে গেছে। 🥹💖
+                    ভাবতেই অবাক লাগে, প্রতিটা জন্মদিনের সাথেই তুই কোনো না কোনোভাবে জড়িয়ে আছিস। প্রতিটা জন্মদিন মানেই
+                    নতুন কিছু স্মৃতি, নতুন কিছু মুহূর্ত… যেগুলো এখন মনে পড়লে অজান্তেই মুখে হাসি চলে আসে। তাই এই ছোট্ট
+                    কর্নারটা শুধু সেই সুন্দর স্মৃতিগুলোর জন্য। 🤍
+
+                </p>
+
+                <h3 style="text-align:center;color:#b1608d;margin:30px 0 15px;">
+                    💌 এটা হলো তোর সাথে পরিচয় হওয়ার পর আমার প্রথম জন্মদিন 🥲
+
+                </h3>
+
+                <div class="photo" style="max-width:420px;margin:0 auto;">
+                    <center><img src="2022.jpeg" alt=""></center>
+                </div>
+
+
+                <h3 style="text-align:center;color:#b1608d;margin:30px 0 15px;">
+                    💌 এখনও মনে আছে,তোর ওই "এক মিনিট আগে" (Sorry 59😐) কথাটা। যতবার দেখি, ততবারই হাসি পায় 😂
+
+                </h3>
+
+                <div class="photo" style="max-width:420px;margin:0 auto;">
+                    <center><img src="2023.jpeg" alt=""></center>
+                </div>
+
+
+
+                <h3 style="text-align:center;color:#b1608d;margin:30px 0 15px;">
+                    💌 আরেকটা মজার ঘটনা হলো, ঐদিন আমি রাত ১১টা ৫৭ মিনিটে ইনবক্সে ঢুকেছিলাম। ঢুকেই দেখি অনেকক্ষণ ধরে তোর
+                    টাইপিং দেখাচ্ছে। তখন এত হাসি পাচ্ছিল! মনে হচ্ছিল, কেউ একজন ১২টা বাজানোর অপেক্ষায় বসে আছে, যেন এক
+                    সেকেন্ডও মিস না হয়। 😆💖
+
+                </h3>
+
+                <div class="photo" style="max-width:420px;margin:0 auto;">
+                    <center><img src="2024.jpeg" alt=""></center>
+                </div>
+
+                <h3 style="text-align:center;color:#b1608d;margin:30px 0 15px;">
+                    💌 আমার জন্মদিন প্রায় প্রতি বছরই রমজান মাসের মধ্যেই পড়ে। 🫢
+                </h3>
+
+                <div class="photo" style="max-width:420px;margin:0 auto;">
+                    <center><img src="2025.jpeg" alt=""></center>
+                </div>
+
+                <h3 style="text-align:center;color:#b1608d;margin:30px 0 15px;">
+                    💌 দেখ, এবারও তার ব্যতিক্রম হলো না। আবারও রমজানের মধ্যেই চলে এলো আমার জন্মদিন। 😶‍🌫️🌙
+                </h3>
+
+                <div class="photo" style="max-width:420px;margin:0 auto;">
+                    <center><img src="2026.jpeg" alt=""></center>
+                </div>
+
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(5)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(7)">Next 💕</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STEP 7 -->
+        <section class="step" id="step7">
+            <div class="card">
+                <h2 class="section-title">My Birthday Wishes for Mahi 💕</h2>
+
+                <div class="wish-list">
+                    <div class="wish-item"> ~ ভালো হয়ে যাও বন্ধু 🙂</div>
+                    <div class="wish-item"> আমার মত ভদ্র হতে শিখো হুহ 😏</div>
+                    <div class="wish-item"> আগে যেমন ছিলে সারাজীবন এমনই থেকো 🥲 </div>
+                    <div class="wish-item">তুমি যেমন তোমাকে তেমনই ভালোবাসি 💖</div>
+                    <div class="wish-item">আর হ্যাঁ, অনেক দিন কথা না হলেও,</div>
+                    <div class="wish-item"> আমাকে কখনও ভুলে যেও না 😅.</div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(6)">← Back</button>
+                    <button class="nav-btn tea-btn" onclick="goToStep(8)">Next ☕</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 8 -->
+        <section class="step" id="step8">
+            <div class="card">
+                <h2 class="section-title">Tea & Coffee Corner for Mahi ☕💗</h2>
+                <p class="section-text">
+                    Because a birthday page for Mahi would never be complete without a cozy cha + coffee corner ✨🌸
+                </p>
+
+                <div class="tea-badge-wrap">
+                    <div class="tea-badge">☕ Certified Cha Lover</div>
+                </div>
+
+                <div class="tea-section-box">
+                    <h1 class="signature">
+                        <center>If birthdays had a flavor… yours would taste like tea, coffee & happiness ☕🌷
+                        </center>
+                    </h1>
+                    <p class="tea-text">
+                        Mahi and cozy drinks just make sense together — warm tea, soft coffee vibes, peaceful
+                        moments
+                        and cute little happy feelings.
+                        So this tiny corner is specially for the birthday girl who loves cha, coffee and all the
+                        calm
+                        cozy things 💕
+                    </p>
+
+                    <div class="tea-cups">
+                        <div class="tea-cup">
+                            <div class="steam"><span></span><span></span><span></span></div>
+                            <div class="cup-emoji">☕</div>
+                        </div>
+
+
+                        <div class="tea-cup">
+                            <div class="steam"><span></span><span></span><span></span></div>
+                            <div class="cup-emoji">🤎</div>
+                        </div>
+                    </div>
+
+                    <div class="tea-note-grid">
+                        <div class="tea-note">
+
+                            <h4>Warm Like Tea</h4>
+                            <p>Just like a perfect cup of tea, your presence feels warm, comforting and impossible
+                                not
+                                to love.</p>
+                        </div>
+
+                        <div class="tea-note">
+
+                            <h4>Cozy Like Coffee</h4>
+                            <p>You have that soft calm vibe that feels like pretty evenings, sweet talks and a
+                                comforting cup of coffee.</p>
+                        </div>
+
+                        <div class="tea-note">
+
+                            <h4>Little Happy Moments</h4>
+                            <p>I hope your life is always full of tiny happy moments — warm cha, soft coffee,
+                                laughter
+                                and people who love you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(7)">← Back</button>
+                    <button class="nav-btn tea-btn" onclick="goToStep(9)">Next ☕💖</button>
+                </div>
+            </div>
+        </section>
+        <!-- STEP 9 -->
+        <section class="step" id="step9">
+            <div class="video-box">
+                <h3 style="text-align:center;color:#b1608d;margin-bottom:15px;">
+                    🎥 A Special Memory 💖
+                </h3>
+
+
+
+                <div class="video-container">
+                    <video class="birthdayVideo" controls playsinline>
+                        <source src="maria.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(8)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(10)"> Next 🎀</button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- STEP 10 -->
+        <section class="step" id="step10">
+            <div class="video-box">
+                <h3 style="text-align:center;color:#b1608d;margin-bottom:15px;">
+                    🎥 Love you dear 💖
+                </h3>
+
+
+
+                <div class="video-container">
+                    <video class="birthdayVideo" controls playsinline>
+                        <source src="mahi.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(9)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(11)"> Next 🎀</button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- STEP 11 -->
+        <section class="step" id="step11">
+            <div class="video-box">
+                <h3 style="text-align:center;color:#b1608d;margin-bottom:15px;">
+                    🎥 2022 💖
+                </h3>
+
+
+
+                <div class="video-container">
+                    <video class="birthdayVideo" controls playsinline>
+                        <source src="ugss.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(10)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(12)">Next 🎀</button>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- STEP 12 -->
+        <section class="step" id="step12">
+            <div class="card">
+                <h2 class="section-title">One Last Thing for Mahi 💗</h2>
+
+                <div class="final-box">
+
+                    <p>
+                        I hope this birthday wraps you in happiness, gives you memories that stay warm in your
+                        heart,
+                        and reminds you that you are appreciated more than you know. May this year be full of pastel
+                        dreams,
+                        happy surprises, sweet people, and the kind of peace that makes life feel beautiful.
+                    </p>
+
+                    <div class="signature">
+                        Happy Birthday again, Mahi 🎂🌷💖 <br>
+                        Stay happy, stay blessed, stay your beautiful self ✨
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn back-btn" onclick="goToStep(11)">← Back</button>
+                    <button class="nav-btn" onclick="goToStep(1)">Start again 🎀</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            This is for you habaitta ☕ @maria_mahi
+        </footer>
+    </div>
+    <script>
+
+
+        const music = document.getElementById("bgMusic");
+        const screen = document.getElementById("enterScreen");
+
+        function startExperience() {
+            // hide intro screen
+            screen.style.display = "none";
+
+
+            music.play().catch(() => { });
+
+
+            document.addEventListener("click", () => music.play(), { once: true });
+            document.addEventListener("touchstart", () => music.play(), { once: true });
+        }
+
+        document.addEventListener("click", () => {
+            music.play().catch(() => { });
+        }, { once: true });
+
+        function goToStep(n) {
+            document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+            document.getElementById("step" + n).classList.add("active");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        const hearts = document.getElementById("floatingHearts");
+        const tea = document.getElementById("floatingTea");
+
+        function createHeart() {
+            const d = document.createElement("div");
+            d.className = "heart";
+            d.innerHTML = "💖";
+            d.style.left = Math.random() * 100 + "vw";
+            d.style.animationDuration = (5 + Math.random() * 5) + "s";
+            hearts.appendChild(d);
+            setTimeout(() => d.remove(), 10000);
+        }
+
+        function createTea() {
+            const d = document.createElement("div");
+            d.className = "tea-float";
+            d.innerHTML = "☕";
+            d.style.left = Math.random() * 100 + "vw";
+            d.style.animationDuration = (6 + Math.random() * 5) + "s";
+            tea.appendChild(d);
+            setTimeout(() => d.remove(), 11000);
+        }
+
+        setInterval(createHeart, 500);
+        setInterval(createTea, 900);
+
+        const videos = document.querySelectorAll(".birthdayVideo");
+
+        videos.forEach(video => {
+
+            video.addEventListener("play", () => {
+                music.pause();
+            });
+
+            video.addEventListener("pause", () => {
+                if (!video.ended) {
+                    music.play().catch(() => { });
+                }
+            });
+
+            video.addEventListener("ended", () => {
+                music.play().catch(() => { });
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
